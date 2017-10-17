@@ -1,0 +1,186 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="false"
+    >
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:weightSum="1">
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="10dp"
+            android:paddingTop="10dp"
+            android:layout_marginBottom="20dp"
+            android:weightSum="1"
+            style="@style/fundo">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/logo_p"
+                android:contentDescription="@string/collects_trees" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:text="@string/titulo_min"
+                android:id="@+id/txt_titulo"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
+                android:textColor="#FFFFFF"
+                android:layout_weight="0.84" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/meu_painel"
+            android:id="@+id/textView"
+            android:textColor="#186110"
+            android:layout_marginLeft="10dp"
+            android:layout_marginBottom="30dp"
+            android:onClick="novo_projeto_censo"
+            />
+
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:weightSum="1">
+
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_painel"
+                android:layout_marginRight="20dp"
+                android:contentDescription="@string/collects_trees" />
+
+            <Button
+                android:layout_width="259dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radius_botton_painel"
+                android:text="@string/painel_projeto_censo"
+                android:id="@+id/btn_novo_projeto_censo"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_weight="1"
+                android:textColor="#FFFFFF"
+                android:onClick="novo_projeto_censo" />
+
+
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_painel"
+                android:layout_marginRight="20dp"
+                android:contentDescription="@string/collects_trees" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/painel_projeto_amostras"
+                android:id="@+id/btn_projeto_amostras"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="#FFFFFF"
+                android:background="@drawable/radius_botton_painel"
+                android:onClick="novo_projeto_amostras"
+                android:layout_weight="1" />
+
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:weightSum="1">
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_painel"
+                android:layout_marginRight="20dp"
+                android:contentDescription="@string/collects_trees" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radius_botton_painel"
+                android:text="@string/painel_todos_projetos_censos"
+                android:id="@+id/btn_todos_censo"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textColor="#FFFFFF"
+                android:onClick="todos_projetos_censo"
+                android:layout_weight="1" />
+        </LinearLayout>
+
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="horizontal"
+            android:paddingLeft="10dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="10dp"
+            android:weightSum="1">
+
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/icon_painel"
+                android:layout_marginRight="20dp"
+                android:contentDescription="@string/collects_trees" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/radius_botton_painel"
+                android:text="@string/painel_todos_projetos_amostras"
+                android:id="@+id/btn_todas_amostras"
+                android:layout_gravity="center_horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:layout_weight="1"
+                android:textColor="#FFFFFF"
+                android:onClick="todos_projetos_amostras"
+                />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</ScrollView>
