@@ -50,4 +50,5 @@
     <string name="tv_login">Login</string>
     <string name="tv_senha">Senha:</string>
     <string name="btn_conect">Conectar</string>
+    <string name="btn_nova_amostra">Nova amostra</string>
 </resources>

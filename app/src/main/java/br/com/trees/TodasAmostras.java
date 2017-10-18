@@ -79,21 +79,6 @@ public class TodasAmostras extends ListActivity{
         }else if(amostra.getStatus().equals("EM_PROGRESSO")){
             menu.add("Marcar como concluído");
         }
-
-
-    }
-
-
-    //CRIANDO O MENU
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        super.onCreateOptionsMenu(menu);
-
-        if (projetoAmostras.getStatus().equals("EM_PROGRESSO")) {
-            menu.add(0, MENU_NOVA_AMOSTRA, 0, "Criar nova amostra");
-        }
-
-        return true;
     }
 
     @Override
@@ -128,17 +113,14 @@ public class TodasAmostras extends ListActivity{
         }
     }
 
-    //PEGANDO AS AÇÕES DO MENU
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        switch (item.getItemId()){
-            case MENU_NOVA_AMOSTRA:
-                Intent it = new Intent(this, NovaAmostra.class);
-                it.putExtra("idProjetoAmostra", projetoAmostras.getId().toString());
-                startActivity(it);
-                break;
+    //ACOES DO BOTÃO NOVA AMOSTRA
+    public void nova_amostra(View v){
+        if (projetoAmostras.getStatus().equals("EM_PROGRESSO")) {
+            Intent novaAmostra = new Intent(this, NovaAmostra.class);
+            novaAmostra.putExtra("idProjetoAmostra", projetoAmostras.getId().toString());
+            startActivity(novaAmostra);
         }
-        return true;
+        Toast.makeText(this, "Atênção, verifique o status do projeto !", Toast.LENGTH_LONG).show();
     }
 
     //PASSANDO O ID DA AMOSTRA PARA A OUTRA PAGINA

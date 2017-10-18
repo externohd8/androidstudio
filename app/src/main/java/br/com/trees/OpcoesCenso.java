@@ -81,6 +81,7 @@ public class OpcoesCenso extends Activity {
         arvores = arvoreDAO.listar();
         adapter = new ArrayAdapter<>(this, R.layout.activity_search_arvore_item, arvores);
 
+
         acBuscar = (AutoCompleteTextView) findViewById(R.id.ac_buscar);
         acBuscar.setAdapter(adapter);
         acBuscar.setThreshold(1);

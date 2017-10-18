@@ -12,6 +12,7 @@ import java.util.List;
 import br.com.banco.BancoDados;
 import br.com.model.Arvore;
 import br.com.model.DadosProjetoCenso;
+import br.com.model.ProjetoCenso;
 
 /**
  * Created by Fernando on 20/09/2016.
@@ -53,8 +54,12 @@ public class DadosProjetoCensoDAO {
             do {
                 DadosProjetoCenso dpc = new DadosProjetoCenso();
 
+                dpc.setId(c.getLong(c.getColumnIndex("id")));
                 dpc.setAltura(c.getDouble(c.getColumnIndex("altura")));
                 dpc.setCap(c.getDouble(c.getColumnIndex("cap")));
+                ProjetoCenso projetoCenso = new ProjetoCenso();
+                projetoCenso.setId(c.getLong(c.getColumnIndex("id_projeto")));
+                dpc.setProjetoCenso(projetoCenso);
 
                 Arvore arvore = arvoreDAO.buscar(c.getLong(c.getColumnIndex("id_arvore")));
                 dpc.setArvore(arvore);
@@ -81,6 +86,12 @@ public class DadosProjetoCensoDAO {
         cursor.close();
 
         return count;
+    }
+
+    public void excluir(String id) {
+
+        db.delete("dados_projeto_censo", "id = ?", new String[] {id});
+
     }
 
 }

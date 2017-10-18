@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import br.com.banco.BancoDados;
+import br.com.model.Amostra;
 import br.com.model.Arvore;
 import br.com.model.DadosProjetoAmostra;
 
@@ -54,6 +55,12 @@ public class DadosProjetoAmostraDAO {
                 DadosProjetoAmostra dpc = new DadosProjetoAmostra();
                 Arvore arvore = arvoreDAO.buscar(c.getLong(c.getColumnIndex("id_arvore")));
                 dpc.setArvore(arvore);
+                dpc.setId(c.getLong(c.getColumnIndex("id")));
+
+                Amostra amostra = new Amostra();
+                amostra.setId(c.getLong(c.getColumnIndex("id_amostra")));
+                dpc.setAmostra(amostra);
+
                 dpc.setAltura(c.getDouble(c.getColumnIndex("altura")));
                 dpc.setCap(c.getDouble(c.getColumnIndex("cap")));
                 dpcs.add(dpc);
@@ -82,6 +89,12 @@ public class DadosProjetoAmostraDAO {
         cursor.close();
 
         return count;
+
+    }
+
+    public void excluir(String id) {
+
+        db.delete("dados_projeto_amostra", "id = ?", new String[] {id});
 
     }
 
