@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import br.com.enums.Status;
 import br.com.model.Amostra;
 import br.com.trees.R;
 
@@ -41,7 +42,7 @@ public class AmostrasAdapter extends ArrayAdapter<Amostra> {
         Amostra amostra = amostras.get(position);
         tvNome.setText(amostra.getNome());
         tvTamanhoAmostra.setText(Double.toString(amostra.getTamanho()));
-        tvStatus.setText(amostra.getStatus());
+        tvStatus.setText(Status.get(amostra.getStatus()).getDescricao());
 
         return view;
     }

@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import br.com.enums.Status;
 import br.com.model.ProjetoCenso;
 import br.com.trees.R;
 
@@ -40,7 +41,7 @@ public class ProjetoCensoAdapter extends ArrayAdapter<ProjetoCenso> {
         ProjetoCenso projetoCenso = projetoCensos.get(position);
         tvNome.setText(projetoCenso.getNome());
         tvAreaInventariada.setText(Double.toString(projetoCenso.getAreaInventariada()));
-        tvStatus.setText(projetoCenso.getStatus());
+        tvStatus.setText(Status.get(projetoCenso.getStatus()).getDescricao());
 
         return view;
     }

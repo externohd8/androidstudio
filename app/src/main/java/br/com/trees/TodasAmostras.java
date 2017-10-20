@@ -119,6 +119,7 @@ public class TodasAmostras extends ListActivity{
             Intent novaAmostra = new Intent(this, NovaAmostra.class);
             novaAmostra.putExtra("idProjetoAmostra", projetoAmostras.getId().toString());
             startActivity(novaAmostra);
+            finish();
         }
         Toast.makeText(this, "Atênção, verifique o status do projeto !", Toast.LENGTH_LONG).show();
     }

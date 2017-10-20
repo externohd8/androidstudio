@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">Trees</string>
-    <string name="titulo">COLLECT TREES</string>
+    <string name="app_name">Florest Simulator</string>
+    <string name="titulo">FLOREST SIMULATOR</string>
     <string name="acessar_sistema">Acessar Sistema</string>
-    <string name="titulo_min">Collects Trees</string>
+    <string name="titulo_min">Florest Simulator</string>
     <string name="novo_projeto_censo">Novo projeto censo</string>
     <string name="nome_projeto">Nome projeto:</string>
     <string name="area_inventariada">Área inventariada:</string>
-    <string name="collects_trees">Collects Trees</string>
+    <string name="collects_trees">Florest Simulator</string>
     <string name="criar_projeto">Criar projeto</string>
     <string name="novo_projeto_amostra">Novo projeto por amostras</string>
     <string name="meu_painel">Meu painel</string>

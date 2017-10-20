@@ -9,6 +9,7 @@ import android.widget.TextView;
 
 import java.util.List;
 
+import br.com.enums.Status;
 import br.com.model.ProjetoAmostras;
 import br.com.trees.R;
 
@@ -42,7 +43,7 @@ public class ProjetoAmostrasAdapter extends ArrayAdapter<ProjetoAmostras> {
         tvNome.setText(projetoAmostra.getNome());
         tvAreaInventariada.setText(Double.toString(projetoAmostra.getAreaInventariada()));
         tvIndiceConfianca.setText(Double.toString(projetoAmostra.getIndiceConfianca()));
-        tvStatus.setText(projetoAmostra.getStatus());
+        tvStatus.setText(Status.get(projetoAmostra.getStatus()).getDescricao());
 
         return view;
     }
